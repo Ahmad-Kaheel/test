@@ -15,8 +15,16 @@ class MovieAdmin(admin.ModelAdmin):
 admin.site.register(Movie , MovieAdmin )  
 """
 class MovieAdmin(admin.ModelAdmin):
+    list_display = ( 'movie_title', 'release_year' ) # Show these fields once I open the table 
+    list_display_links = ['release_year'] # determine which fields are clickable 
     # exclude = ('movie_title',) # unregister the title of the movie 
-    fields = ('movie_title',) # Show just this field and exclude the other fields .
+   # fields = ('movie_title',) # Show just this field and exclude the other fields .
+
+
+
+
+
+
 # Register your models here.
 
 admin.site.register(Movie , MovieAdmin) # for register a table , don't forget to import it 
